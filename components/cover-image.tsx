@@ -9,7 +9,6 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug }: Props) => {
-  console.log("slug", slug);
   const image = (
     <Image
       src={src}

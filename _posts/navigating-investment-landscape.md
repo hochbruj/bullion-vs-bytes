@@ -2,7 +2,7 @@
 title: "Precious Metals vs. Cryptocurrencies: Navigating the Investment Landscape"
 excerpt: As we explore the current financial landscape in October 2023, we'll discuss topics ranging from the U.S. national debt's explosion to the resurgence of Bitcoin after a bear market. Join us on this multifaceted journey to understand how these assets can fit into diversified portfolios and offer a balanced approach to wealth preservation and growth.
 coverImage: "/assets/blog/introduction/cover.png"
-date: "2023-10-11T05:35:07.322Z"
+date: "2023-10-15T05:35:07.322Z"
 ogImage:
   url: "/assets/blog/introduction/cover.png"
 ---

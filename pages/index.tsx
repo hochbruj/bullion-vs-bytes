@@ -17,7 +17,7 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout>
+      <Layout showComments={false} title={null} identifier={null}>
         <Head>
           <title>Bullion vs Bytes</title>
         </Head>

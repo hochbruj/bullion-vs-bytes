@@ -1,6 +1,6 @@
 ---
-title: "Precious Metals vs. Cryptocurrencies: Navigating the Investment Landscape"
-excerpt: As we explore the current financial landscape in October 2023, we'll discuss topics ranging from the U.S. national debt's explosion to the resurgence of Bitcoin after a bear market. Join us on this multifaceted journey to understand how these assets can fit into diversified portfolios and offer a balanced approach to wealth preservation and growth.
+title: "Setting the Stage: Exploring the Current Financial Landscape"
+excerpt: Amid a complex and ever-changing financial world, this article examines the current state of the financial landscape. It considers factors like inflation, U.S. national debt, soaring Treasury yields, and the bond market's turbulence. We also touch upon the dynamics of the tech stock market. The article provides the context for our "BullionVsBytes" series, where we will compare precious metals and cryptocurrencies as inflation hedges, empowering readers to make informed investment decisions.
 coverImage: "/assets/blog/introduction/cover.png"
 date: "2023-10-15T05:35:07.322Z"
 ogImage:
@@ -8,8 +8,6 @@ ogImage:
 ---
 
 ## Introduction: Setting the Stage
-
-In the ever-evolving and often complex financial world, the choices we make regarding our investments can have a profound impact on our financial futures. Are you ready to explore the fascinating realm of investment opportunities? Welcome to "BullionVsBytes," your guide through the intricacies of two distinct yet captivating investment avenues: precious metals and cryptocurrencies.
 
 Join us as we embark on a journey of exploration and discovery, shedding light on the historical significance, investment characteristics, and inflation-hedging potential of gold, Bitcoin, Ethereum, and silver. Whether you're a seasoned investor or just beginning your investment journey, our goal is to empower you with a comprehensive understanding of these assets. We want to equip you with the tools needed to navigate the ever-evolving financial landscape and make choices that align with your financial goals and aspirations.
 
@@ -21,7 +19,7 @@ There is a lot happening in both the financial and real worlds at the moment. In
 
 [![Krugman on Twitter about inflation](/assets/blog/introduction/krugman-twitter.png)](https://twitter.com/paulkrugman/status/1702658724832145412)
 
-Fed Chairman Jay Powell is celebrated for orchestrating a soft landing of the economy, skillfully taming inflation. Critics, however, warn that it's only a matter of time until the next financial crisis strikes, potentially forcing the Fed to once again resort to money printing, potentially sparking inflation to new heights.
+Fed Chairman Jerome Powell is celebrated for orchestrating a soft landing of the economy, skillfully taming inflation. Critics, however, warn that it's only a matter of time until the next financial crisis strikes, potentially forcing the Fed to once again resort to money printing, potentially sparking inflation to new heights.
 
 ### The Exploding U.S. National Debt
 

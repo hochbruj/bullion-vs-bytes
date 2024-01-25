@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/" className="hover:underline">
-        Bullion vs Bytes
-      </Link>
-      .
-    </h2>
+    <div className="flex lg:flex-1">
+      <a href="#" className="-m-1.5 p-1.5">
+        <span className="sr-only">BullionVsBytes</span>
+        <img className="h-16 w-auto" src="/assets/logoV1.jpeg" alt="" />
+      </a>
+    </div>
   );
 };
 

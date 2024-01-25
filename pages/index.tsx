@@ -1,46 +1,26 @@
+import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
+import { PerformanceData } from "../types/rates";
 import Post from "../interfaces/post";
+import Header from "../components/header";
+import CurrentTable from "../components/current-table";
 
 type Props = {
   allPosts: Post[];
+  performanceData: PerformanceData;
 };
 
-export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-  return (
-    <>
-      <Layout showComments={false} title={null} identifier={null}>
-        <Head>
-          <title>Bullion vs Bytes</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
+export const getServerSideProps = (async () => {
+  const res = await fetch(
+    "https://us-central1-bullion-vs-bytes.cloudfunctions.net/getPerformance"
   );
-}
+  const performanceData: PerformanceData = await res.json();
 
-export const getStaticProps = async () => {
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -49,8 +29,28 @@ export const getStaticProps = async () => {
     "coverImage",
     "excerpt",
   ]);
+  return { props: { performanceData, allPosts } };
+}) satisfies GetServerSideProps<{
+  performanceData: PerformanceData;
+  allPosts;
+}>;
 
-  return {
-    props: { allPosts },
-  };
-};
+export default function Index({ allPosts, performanceData }: Props) {
+  return (
+    <>
+      <Layout showComments={false} title={null} identifier={null}>
+        <Head>
+          <title>Bullion vs Bytes</title>
+        </Head>
+        <Container>
+          <Header />
+          <Intro />
+          <div className="flex justify-center">
+            <CurrentTable performanceData={performanceData} />
+          </div>
+          <MoreStories posts={allPosts} />
+        </Container>
+      </Layout>
+    </>
+  );
+}

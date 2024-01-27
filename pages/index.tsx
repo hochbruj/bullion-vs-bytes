@@ -9,6 +9,7 @@ import { PerformanceData } from "../types/rates";
 import Post from "../interfaces/post";
 import Header from "../components/header";
 import CurrentTable from "../components/current-table";
+import Performance from "../components/performance";
 
 type Props = {
   allPosts: Post[];
@@ -48,6 +49,7 @@ export default function Index({ allPosts, performanceData }: Props) {
           <div className="flex justify-center">
             <CurrentTable performanceData={performanceData} />
           </div>
+          <Performance performanceData={performanceData} />
           <MoreStories posts={allPosts} />
         </Container>
       </Layout>

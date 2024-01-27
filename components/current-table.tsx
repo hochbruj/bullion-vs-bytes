@@ -28,7 +28,7 @@ const CurrentTable = ({ performanceData }: Props) => {
             {numberToDollar(performanceData.current.BTC)}
           </td>
           <td
-            className={`py-4 whitespace-nowrap text-lg text-${numberToColor(
+            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
               performanceData.recent.DAY.BTC
             )}-600`}
           >
@@ -50,8 +50,8 @@ const CurrentTable = ({ performanceData }: Props) => {
             {numberToDollar(performanceData.current.AU)} / oz
           </td>
           <td
-            className={`py-4 whitespace-nowrap text-lg text-${numberToColor(
-              performanceData.recent.DAY.AU
+            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
+              performanceData.recent.DAY.AG
             )}-600`}
           >
             {numberToPercent(performanceData.recent.DAY.AU)}
@@ -72,7 +72,7 @@ const CurrentTable = ({ performanceData }: Props) => {
             {numberToDollar(performanceData.current.ETH)}
           </td>
           <td
-            className={`py-4 whitespace-nowrap text-lg text-${numberToColor(
+            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
               performanceData.recent.DAY.ETH
             )}-600`}
           >

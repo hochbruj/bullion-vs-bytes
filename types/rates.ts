@@ -10,7 +10,7 @@ export type CryptoRates = {
   ETH: number;
 };
 
-export type Rates = PmRates & CryptoRates;
+export type Rates = PmRates & CryptoRates & { SPY: number};
 
 export type RecentReturns = {
   "3M": Rates;

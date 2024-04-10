@@ -7,7 +7,7 @@ type Props = {
   performanceData: PerformanceData;
 };
 const Performance = ({ performanceData }: Props) => {
-    const minMax = getMaxMinChart(performanceData)
+  const minMax = getMaxMinChart(performanceData);
   return (
     <>
       <h2 className="mb-12 mt-20 text-5xl font-bold tracking-tighter leading-tight">
@@ -17,7 +17,11 @@ const Performance = ({ performanceData }: Props) => {
         <div className="p-1 ">
           <h4 className="mb-12 text-lg text-center">Recent Returns</h4>
           <div className="ml-8">
-            <PerformanceChart data={performanceData.recent} width="400px"  minMax={minMax} />
+            <PerformanceChart
+              data={performanceData.recent}
+              width="400px"
+              minMax={minMax}
+            />
           </div>
           <PerformanceTable data={performanceData.recent} />
         </div>
@@ -27,7 +31,11 @@ const Performance = ({ performanceData }: Props) => {
             Average Annualized Returns
           </h4>
           <div className="ml-14">
-            <PerformanceChart data={performanceData.annualized} width="600px" minMax={minMax} />
+            <PerformanceChart
+              data={performanceData.annualized}
+              width="600px"
+              minMax={minMax}
+            />
           </div>
           <PerformanceTable data={performanceData.annualized} />
         </div>

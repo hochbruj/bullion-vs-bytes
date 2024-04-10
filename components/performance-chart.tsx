@@ -77,6 +77,7 @@ const PerformanceChart = ({ data, width, minMax }: Props) => {
             <Bar dataKey="Gold" fill="gold" />
             <Bar dataKey="Ethereum" fill="#5E8DF7" />
             <Bar dataKey="Silver" fill="silver" />
+            <Bar dataKey="S&P 500" fill="green" />
           </BarChart>
         </ResponsiveContainer>
       </div>

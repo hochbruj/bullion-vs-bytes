@@ -37,6 +37,7 @@ export const performanceToChart = (data: AnnualizedReturns | RecentReturns) => {
           Gold: parseFloat((interval.AU * 100).toFixed(2)),
           Ethereum: parseFloat((interval.ETH * 100).toFixed(2)),
           Silver: parseFloat((interval.AG * 100).toFixed(2)),
+          'S&P 500': parseFloat((interval.SPY * 100).toFixed(2)),
         };
       }
     });
@@ -53,6 +54,7 @@ export const getMaxMinChart = (performanceData: PerformanceData): MinMax => {
         performance[e].AU,
         performance[e].AG,
         performance[e].ETH,
+        performance[e].SPY,
       ])
   );
   const allValues = [].concat(...[].concat(...totalValues)).map((e) => e * 100);

@@ -10,6 +10,7 @@ const keyColorMap = {
   Gold: "bg-amber-300",
   Ethereum: "bg-blue-500",
   Silver: "bg-stone-400",
+  'S&P 500': 'bg-green-700'
 };
 
 const PerformanceTable = ({ data }: Props) => {
@@ -21,7 +22,7 @@ const PerformanceTable = ({ data }: Props) => {
         <tbody>
           {keys.map((key) => (
             <tr
-              key={key}
+              key={key + tableData[0].name}
               className="border-t border-b border-grey-300 hover:bg-gray-100"
             >
               <td className="px-4 py-2">

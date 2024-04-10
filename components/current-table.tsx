@@ -9,6 +9,18 @@ type Props = {
   performanceData: PerformanceData;
 };
 
+const changeRow = (change: number): any => {
+  return change < 0 ? (
+    <td className={`py-4 pr-6 whitespace-nowrap text-lg text-red-600`}>
+      {numberToPercent(change)}
+    </td>
+  ) : (
+    <td className={`py-4 pr-6 whitespace-nowrap text-lg text-green-600`}>
+      {numberToPercent(change)}
+    </td>
+  );
+};
+
 const CurrentTable = ({ performanceData }: Props) => {
   return (
     <table className="border bg-gray-50 rounded-lg overflow-hidden">
@@ -27,13 +39,7 @@ const CurrentTable = ({ performanceData }: Props) => {
           <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-700">
             {numberToDollar(performanceData.current.BTC)}
           </td>
-          <td
-            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
-              performanceData.recent.DAY.BTC
-            )}-600`}
-          >
-            {numberToPercent(performanceData.recent.DAY.BTC)}
-          </td>
+          {changeRow(performanceData.recent.DAY.BTC)}
         </tr>
         <tr className="border-b">
           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -49,13 +55,7 @@ const CurrentTable = ({ performanceData }: Props) => {
           <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-700">
             {numberToDollar(performanceData.current.AU)} / oz
           </td>
-          <td
-            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
-              performanceData.recent.DAY.AG
-            )}-600`}
-          >
-            {numberToPercent(performanceData.recent.DAY.AU)}
-          </td>
+          {changeRow(performanceData.recent.DAY.AU)}
         </tr>
         <tr className="border-b">
           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -71,13 +71,7 @@ const CurrentTable = ({ performanceData }: Props) => {
           <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-700">
             {numberToDollar(performanceData.current.ETH)}
           </td>
-          <td
-            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
-              performanceData.recent.DAY.ETH
-            )}-600`}
-          >
-            {numberToPercent(performanceData.recent.DAY.ETH)}
-          </td>
+          {changeRow(performanceData.recent.DAY.ETH)}
         </tr>
         <tr className="border-b">
           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -93,13 +87,7 @@ const CurrentTable = ({ performanceData }: Props) => {
           <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-700">
             {numberToDollar(performanceData.current.AG, 2)} / oz
           </td>
-          <td
-            className={`py-4 pr-6 whitespace-nowrap text-lg text-${numberToColor(
-              performanceData.recent.DAY.AG
-            )}-600`}
-          >
-            {numberToPercent(performanceData.recent.DAY.AG)}
-          </td>
+          {changeRow(performanceData.recent.DAY.AG)}
         </tr>
       </tbody>
     </table>

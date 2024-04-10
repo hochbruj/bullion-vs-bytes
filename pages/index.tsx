@@ -44,7 +44,6 @@ export default function Index({ allPosts, performanceData }: Props) {
           <title>Bullion vs Bytes</title>
         </Head>
         <Container>
-          <Header />
           <Intro />
           <div className="flex justify-center">
             <CurrentTable performanceData={performanceData} />

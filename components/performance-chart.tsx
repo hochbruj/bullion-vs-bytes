@@ -72,7 +72,7 @@ const PerformanceChart = ({ data, width, minMax }: Props) => {
               tickFormatter={yAxisFormatter}
               domain={[minValue, maxValue]}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<CustomTooltip active='' payload='' />} />
             <Bar dataKey="Bitcoin" fill="#F7931A" />
             <Bar dataKey="Gold" fill="gold" />
             <Bar dataKey="Ethereum" fill="#5E8DF7" />
